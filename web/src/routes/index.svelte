@@ -12,6 +12,9 @@
 	<Counter />
 
 	<p>Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte apps.</p>
+
+	<a href="/about">About</a>
+	<a href="/test">GraphQL Test</a>
 </main>
 
 <style>

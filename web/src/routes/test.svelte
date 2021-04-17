@@ -5,6 +5,10 @@
 	const launches = query(operationStore(GetLaunchesDocument));
 </script>
 
+<svelte:head>
+	<title>GraphQL Test</title>
+</svelte:head>
+
 {#if $launches.fetching}
 	<p>Loading...</p>
 {:else if $launches.error}
@@ -12,7 +16,10 @@
 {:else}
 	<ul>
 		{#each $launches.data?.launches as todo}
-			<li>{todo.details}</li>
+    {#if  todo.details}
+    <li>{todo.details}</li>
+    {/if}    
+
 		{/each}
 	</ul>
 {/if}
