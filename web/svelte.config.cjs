@@ -20,6 +20,9 @@ module.exports = {
 		vite: {
 			ssr: {
 				noExternal: Object.keys(pkg.dependencies || {})
+			},
+			optimizeDeps: {
+				exclude: ['@urql/svelte', '@urql/exchange-multipart-fetch', 'extract-files']
 			}
 		}
 	}
